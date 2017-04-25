@@ -4,6 +4,16 @@ use Exception;
 class Router
 {
 	protected $method = [];
+	
+	public static function load($file)
+	{
+		$router = new static;
+		
+		require $file;
+		
+		return $router;
+	}
+	
 	public function define($method)
 	{
 		$this->method = $method;
