@@ -7,5 +7,8 @@ $router = new Router;
 
 require 'routes.php';
 
-require $router->redirect('contact');
+$urls = $_SERVER['REQUEST_METHOD'];
+
+
+require $router->redirect('cost');
 

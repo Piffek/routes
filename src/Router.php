@@ -1,6 +1,6 @@
 <?php 
 namespace Src;
-
+use Exception;
 class Router
 {
 	protected $method = [];
@@ -14,8 +14,10 @@ class Router
 		if(array_key_exists($url, $this->method))
 		{
 			return $this->method[$url];
+		}else 
+		{
+			throw new Exception('Nie ma takiej strony');
 		}
-		throw new Exception();
 	}
 }
 
