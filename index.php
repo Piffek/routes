@@ -7,8 +7,8 @@ $router = new Router;
 
 require 'routes.php';
 
-$urls = $_SERVER['REQUEST_METHOD'];
+$urls = trim($_SERVER['REQUEST_URI'],'/');
 
 
-require $router->redirect('cost');
+require $router->redirect($urls);
 
