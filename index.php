@@ -1,5 +1,6 @@
 <?php
 use Src\Router;
+use Src\Request;
 
 require_once 'src/bootstrap.php';
 
@@ -12,6 +13,5 @@ require_once 'src/bootstrap.php';
 //require $router->redirect($urls);
 
 
-$routes = Router::load(__DIR__.'/routes.php');
-$urls = trim($_SERVER['REQUEST_URI'],'/');
-require $routes->redirect($urls);
+require Router::load(__DIR__.'/routes.php')->redirect(Request::url());
+
