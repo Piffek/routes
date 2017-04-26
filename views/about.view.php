@@ -1,4 +1,2 @@
-<?php 
-echo 'about';
-
-?>
+<?php require 'partials/nav.php'; ?>
+	about

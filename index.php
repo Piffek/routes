@@ -12,7 +12,6 @@ require_once 'src/bootstrap.php';
 
 //require $router->redirect($urls);
 
-require 'views/partials/nav.php';
 
 require Router::load(__DIR__.'/routes.php')->redirect(Request::url());
 

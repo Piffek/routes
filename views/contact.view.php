@@ -1,3 +1,2 @@
-<?php 
-echo 'contact';
-?>
+<?php require 'partials/nav.php'; ?>
+	contact

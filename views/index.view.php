@@ -1,3 +1,2 @@
-<?php 
-	echo 'index file';
-?>
+<?php require 'partials/nav.php'; ?>
+	index
