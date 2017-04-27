@@ -3,7 +3,7 @@ namespace Src;
 use Exception;
 class Router
 {
-	protected $method = [];
+	protected $router = [];
 	
 	public static function load($file)
 	{
@@ -16,23 +16,21 @@ class Router
 	
 	public function get($url, $controller)
 	{
-		$this->method['GET'][$url] = $controller;
+		$this->routes['GET'][$url] = $controller;
 	}
 	
 	public function post($url, $controller)
 	{
-		$this->method['post'][$url] = $controller;
+		$this->routes['POST'][$url] = $controller;
 	}
 	
 	public function redirect($url, $request)
 	{
-		if(array_key_exists($url, $this->method[$request]))
+		if(array_key_exists($url, $this->routes[$request]))
 		{
-			return $this->method[$request][$url];
-		}else 
-		{
-			throw new Exception('Nie ma takiej strony');
+			return $this->routes[$request][$url];
 		}
+		throw new Exception('Nie zdefiniowano takiej strony');
 	}
 }
 
