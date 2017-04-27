@@ -14,16 +14,21 @@ class Router
 		return $router;
 	}
 	
-	public function define($method)
+	public function get($url, $controller)
 	{
-		$this->method = $method;
+		$this->method['GET'][$url] = $controller;
 	}
 	
-	public function redirect($url)
+	public function post($url, $controller)
 	{
-		if(array_key_exists($url, $this->method))
+		$this->method['post'][$url] = $controller;
+	}
+	
+	public function redirect($url, $request)
+	{
+		if(array_key_exists($url, $this->method[$request]))
 		{
-			return $this->method[$url];
+			return $this->method[$request][$url];
 		}else 
 		{
 			throw new Exception('Nie ma takiej strony');

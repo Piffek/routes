@@ -1,2 +1,5 @@
 <?php require 'partials/nav.php'; ?>
-	index
+	<form action="/contact" method="GET">
+		<input name='name'>
+		<button type='submit'>Wyœlij</button>
+	</form>

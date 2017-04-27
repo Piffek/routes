@@ -1,9 +1,10 @@
 <?php 
 
-	$router->define([
-			'' => 'controllers/IndexController.php',
-			'contact' => 'controllers/ContactController.php',
-			'about' => 'controllers/AboutController.php',
-	]);
+	
+	$router->get('contact','controllers/ContactController.php');
+	
+	$router->get('', 'controllers/IndexController.php');
+	
+	$router->post('about','controllers/AboutController.php');
 
 ?>

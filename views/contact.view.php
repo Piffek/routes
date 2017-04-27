@@ -1,2 +1,2 @@
 <?php require 'partials/nav.php'; ?>
-	contact
+	<?php print_r($_GET); ?>

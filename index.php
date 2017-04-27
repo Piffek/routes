@@ -13,5 +13,5 @@ require_once 'src/bootstrap.php';
 //require $router->redirect($urls);
 
 
-require Router::load(__DIR__.'/routes.php')->redirect(Request::url());
+require Router::load(__DIR__.'/routes.php')->redirect(Request::url(), Request::method());
 
