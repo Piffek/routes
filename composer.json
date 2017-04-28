@@ -3,7 +3,8 @@
 		"psr-4" : {
 			"Src\\" : "src",
 			"Controllers\\" : "controllers",
-			"Views\\" : "views"
+			"Views\\" : "views",
+			"Database\\" : "database"
 		}
 	}
 }
