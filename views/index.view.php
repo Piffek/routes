@@ -1,7 +1,7 @@
 <?php require 'partials/nav.php'; ?>
-	<form action="/contact" method="GET">
-		<input name='name'>
-		<button type='submit'>Wyœlij</button>
+	<form action="/contact" method="POST">
+		<input name='table'>
+		<button type='submit'>Wyï¿½lij</button>
 	</form>
 	
 	<?php
@@ -9,7 +9,7 @@
 		foreach($params as $param)
 		{
 
-			//lub dla czytelnoœci
+			//lub dla czytelnoï¿½ci
 			echo ($param*$param < 26) ? $param : '';
 		}
 	?>

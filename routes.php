@@ -1,7 +1,7 @@
 <?php 
 
 	
-	$router->get('contact','controllers/ContactController.php');
+	$router->post('contact','controllers/ContactController.php');
 	
 	$router->get('', 'controllers/IndexController.php');
 	
