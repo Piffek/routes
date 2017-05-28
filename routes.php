@@ -1,10 +1,10 @@
 <?php 
 
 	
-	$router->post('contact','controllers/ContactController.php');
+	$router->get('contact','ContactController@index');
 	
-	$router->get('', 'controllers/IndexController.php');
+	$router->get('', 'IndexController@index');
 	
-	$router->post('about','controllers/AboutController.php');
+	$router->get('about','AboutController@about');
 
 ?>
